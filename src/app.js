@@ -1,5 +1,7 @@
+/*jshint esversion:6*/
 const angular = require('angular');
 const weatherData = require('../mocks/weather.json');
+
 
 //create our application
 angular.module('darkcaster-client', []); //setter syntax
