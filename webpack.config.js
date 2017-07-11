@@ -1,3 +1,4 @@
+/*jshint esversion:6*/
 const webpack = require('webpack');
 const path = require('path');
 
@@ -57,6 +58,13 @@ module.exports = {
 					],
 					fallback: 'style-loader'
 				})
+			},
+			{
+				test: /\.(png|jpg|svg)$/,
+				loader: 'file-loader',
+				options: {
+					name: './images/[name].[hash].[ext]'
+				}
 			}
 		]
 	},
@@ -68,7 +76,8 @@ module.exports = {
 							filename: 'index.html',
 							template: './src/index.html'
 						}),
-						new CopyWebpackPlugin([
-							{from: './src/images', to: './images'}
-						])]
+						// new CopyWebpackPlugin([
+						// 	{from: './src/images', to: './images'}
+						// ])
+					]
 };
