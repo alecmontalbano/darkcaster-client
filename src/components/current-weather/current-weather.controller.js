@@ -8,7 +8,8 @@ function MainController(weather){
   this.imageLookup = {
     'clear-day': clearDay
   };
-  this.weatherData = weather.getCurrently();
+weather.getCurrently(29, -81)
+       .then(currentWeather => this.weatherData = currentWeather);
 
 }
 module.exports = MainController;
