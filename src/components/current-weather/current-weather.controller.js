@@ -4,12 +4,18 @@ MainController.$inject = ['WeatherService']; //magic for us
 
 
 function MainController(weather){
-  this.message = 'hello from angular';
+  this.lat = 0;
+  this.lon = 0;
   this.imageLookup = {
     'clear-day': clearDay
   };
-weather.getCurrently(29, -81)
-       .then(currentWeather => this.weatherData = currentWeather);
+  //functions
+  this.search = function search(){
+    weather.getCurrently(this.lat, this.lon)
+           .then(currentWeather => this.weatherData = currentWeather);
+  };
+
+
 
 }
 module.exports = MainController;
