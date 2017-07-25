@@ -3,6 +3,7 @@ const angular = require('angular');
 
 //services
 const WeatherService = require('./services/weather.service');
+const ImageService = require('./services/images.service');
 
 //components
 const CurrentWeatherComponent = require('./components/current-weather');
@@ -15,6 +16,7 @@ angular.module('darkcaster-client', []); //setter syntax
 
 angular.module('darkcaster-client') //getter syntax
        .factory('WeatherService', WeatherService)
+       .factory('images', ImageService)
        .component('currentWeather', CurrentWeatherComponent)
        .component('minuteWeather', MinuteWeatherComponent)
        .component('hourWeather', HourWeatherComponent)
