@@ -1,7 +1,7 @@
 /*jshint esversion:6*/
 CurrentController.$inject = ['WeatherService', 'images']; //magic for us
 
-function CurrentController(weather){
+function CurrentController(weather, images){
   this.lat = 0;
   this.lon = 0;
   this.imageLookup = images.lookup;

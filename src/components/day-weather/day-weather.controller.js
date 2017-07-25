@@ -2,7 +2,7 @@
 DayController.$inject = ['WeatherService', 'images']; //magic for us
 
 
-function DayController(weather){
+function DayController(weather, images){
   this.lat = 0;
   this.lon = 0;
   this.imageLookup = images.lookup;
