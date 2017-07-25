@@ -8,7 +8,8 @@ function WeatherService($http){
     //label       function name
     getCurrently: getCurrently,
     getMinutely: getMinutely,
-    getHourly: getHourly
+    getHourly: getHourly,
+    getWeekly: getWeekly
   };
   function getCurrently(lat, lon){
     const url= `${baseUrl}${lat},${lon}`;
@@ -29,6 +30,13 @@ function WeatherService($http){
     return $http.get(url)
                 .then(response => {
                   return response.data.hourly;
+                });
+  }
+  function getWeekly(lat, lon){
+    const url = `${baseUrl}${lat},${lon}`;
+    return $http.get(url)
+                .then(response => {
+                  return response.data.weekly;
                 });
   }
 }
