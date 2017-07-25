@@ -9,7 +9,7 @@ function WeatherService($http){
     getCurrently: getCurrently,
     getMinutely: getMinutely,
     getHourly: getHourly,
-    getWeekly: getWeekly
+    getDaily: getDaily
   };
   function getCurrently(lat, lon){
     const url= `${baseUrl}${lat},${lon}`;
@@ -32,11 +32,11 @@ function WeatherService($http){
                   return response.data.hourly;
                 });
   }
-  function getWeekly(lat, lon){
+  function getDaily(lat, lon){
     const url = `${baseUrl}${lat},${lon}`;
     return $http.get(url)
                 .then(response => {
-                  return response.data.weekly;
+                  return response.data.daily;
                 });
   }
 }

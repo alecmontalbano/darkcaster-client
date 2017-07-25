@@ -5,14 +5,17 @@ const angular = require('angular');
 const WeatherService = require('./services/weather.service');
 
 //components
-const WeatherComponent = require('./components/weather/index');
+const CurrentWeatherComponent = require('./components/current-weather');
+const MinuteWeatherComponent = require('./components/minute-weather');
+const HourWeatherComponent = require('./components/hour-weather');
+const DayWeatherComponent = require('./components/day-weather');
 
 //create our application
 angular.module('darkcaster-client', []); //setter syntax
 
 angular.module('darkcaster-client') //getter syntax
        .factory('WeatherService', WeatherService)
-       .component('currentWeather', WeatherComponent)
-       .component('minuteWeather', WeatherComponent)
-       .component('hourWeather', WeatherComponent)
-       .component('weekWeather', WeatherComponent);
+       .component('currentWeather', CurrentWeatherComponent)
+       .component('minuteWeather', MinuteWeatherComponent)
+       .component('hourWeather', HourWeatherComponent)
+       .component('dayWeather', DayWeatherComponent);
