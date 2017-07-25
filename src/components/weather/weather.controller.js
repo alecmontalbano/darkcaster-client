@@ -13,9 +13,8 @@ function MainController(weather){
   this.search = function search(){
     weather.getCurrently(this.lat, this.lon)
            .then(currentWeather => this.weatherData = currentWeather);
+    weather.getMinutely(this.lat, this.lon)
+           .then(minuteWeather => this.weatherData = minuteWeather);
   };
-
-
-
 }
 module.exports = MainController;
