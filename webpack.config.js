@@ -95,8 +95,8 @@ module.exports = {
 						}),
 						new HtmlWebpackPlugin({
 							title: 'Darkcaster',
-							filename: 'week.html',
-							template: './src/week.html'
+							filename: 'day.html',
+							template: './src/day.html'
 						})
 						// new CopyWebpackPlugin([
 						// 	{from: './src/images', to: './images'}
