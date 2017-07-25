@@ -15,6 +15,8 @@ function MainController(weather){
            .then(currentWeather => this.weatherData = currentWeather);
     weather.getMinutely(this.lat, this.lon)
            .then(minuteWeather => this.weatherData = minuteWeather);
+    weather.getHourly(this.lat, this.lon)
+           .then(hourWeather => this.weatherData = hourWeather);
   };
 }
 module.exports = MainController;

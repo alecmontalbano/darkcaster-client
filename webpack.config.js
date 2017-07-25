@@ -87,6 +87,11 @@ module.exports = {
 							title: 'Darkcaster',
 							filename: 'minute.html',
 							template: './src/minute.html'
+						}),
+						new HtmlWebpackPlugin({
+							title: 'Darkcaster',
+							filename: 'hour.html',
+							template: './src/hour.html'
 						})
 						// new CopyWebpackPlugin([
 						// 	{from: './src/images', to: './images'}

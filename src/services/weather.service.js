@@ -7,7 +7,8 @@ function WeatherService($http){
   return {
     //label       function name
     getCurrently: getCurrently,
-    getMinutely: getMinutely
+    getMinutely: getMinutely,
+    getHourly: getHourly
   };
   function getCurrently(lat, lon){
     const url= `${baseUrl}${lat},${lon}`;
@@ -21,6 +22,13 @@ function WeatherService($http){
     return $http.get(url)
                 .then(response => {
                   return response.data.minutely;
+                });
+  }
+  function getHourly(lat, lon){
+    const url = `${baseUrl}${lat},${lon}`;
+    return $http.get(url)
+                .then(response => {
+                  return response.data.hourly;
                 });
   }
 }

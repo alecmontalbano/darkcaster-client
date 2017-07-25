@@ -13,4 +13,5 @@ angular.module('darkcaster-client', []); //setter syntax
 angular.module('darkcaster-client') //getter syntax
        .factory('WeatherService', WeatherService)
        .component('currentWeather', WeatherComponent)
-       .component('minuteWeather', WeatherComponent);
+       .component('minuteWeather', WeatherComponent)
+       .component('hourWeather', WeatherComponent);
