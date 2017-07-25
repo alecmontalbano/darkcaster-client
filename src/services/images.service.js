@@ -1,14 +1,14 @@
 /*jshint esversion:6*/
 const clearDay = require('../images/clear-day.svg');
-const clearNight = require('../images/clear-day.svg');
-const Rain = require('../images/clear-day.svg');
-const Snow = require('../images/clear-day.svg');
-const Sleet = require('../images/clear-day.svg');
-const Wind = require('../images/clear-day.svg');
-const Fog = require('../images/clear-day.svg');
-const Cloudy = require('../images/clear-day.svg');
-const partlyCloudyDay = require('../images/clear-day.svg');
-const partlyCloudyNight = require('../images/clear-day.svg');
+const clearNight = require('../images/clear-night.svg');
+const Rain = require('../images/rain.svg');
+const Snow = require('../images/snow.svg');
+const Sleet = require('../images/sleet.svg');
+const Wind = require('../images/wind.svg');
+const Fog = require('../images/fog.svg');
+const Cloudy = require('../images/cloudy.svg');
+const partlyCloudyDay = require('../images/partly-cloudy-day.svg');
+const partlyCloudyNight = require('../images/partly-cloudy-night.svg');
 const missingImage = require('../images/missing.png');
 
 ImageService.$inject = [];
