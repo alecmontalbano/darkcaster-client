@@ -77,7 +77,7 @@ module.exports = {
 	},
 
 	plugins: [new UglifyJSPlugin(),
-		        new ExtractTextPlugin('style.css'),
+		        new ExtractTextPlugin('styles.css'),
 					  new HtmlWebpackPlugin({
 							title: 'Darkcaster',
 							filename: 'index.html',

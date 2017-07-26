@@ -1,32 +1,28 @@
-<section>
+<section id='user_controls'>
   <div>
-    <label>Latitude:</label>
+    <label>Lat</label>
     <input type="number" ng-model='$ctrl.lat' />
   </div>
   <div>
-    <label>Longitude:</label>
+    <label>Lon</label>
     <input type="number" ng-model='$ctrl.lon' />
   </div>
-  <div>
-    <button type="button" ng-click='$ctrl.search()'>Search</button>
-  </div>
+  <button type="button" ng-click='$ctrl.search()'>Search</button>
 </section>
   <section ng-if='$ctrl.weatherData'>
-    <header>
-      <p>Precipitation Probability: {{ $ctrl.weatherData.precipProbability * 100 | number:2 }}%</p>
+    <div id='summary'>
       <img ng-src="{{$ctrl.imageLookup[$ctrl.weatherData.icon]}}" />
-      <p>{{ $ctrl.weatherData.time * 1000| date:"short" }}</p>
-    </header>
-    <main>
-      <h1>Humidity: {{ $ctrl.weatherData.humidity * 100 | number:0 }}%</h1>
-      <div>
-        <h1>Temperature: {{  $ctrl.weatherData.temperature | number:0 }}&deg; F</h1>
-        <h2>Feels Like: {{$ctrl.weatherData.apparentTemperature | number:0 }}&deg; F</h2>
-      </div>
-      <h1>UV Index: {{ $ctrl.weatherData.uvIndex }}</h1>
-    </main>
-    <footer>
-      <h1>Summary: {{ $ctrl.weatherData.summary }}</h1>
-    </footer>
+      <h3>{{ $ctrl.weatherData.summary }}</h3>
+    </div>
+    <div id='temperature'>
+      <h1>{{  $ctrl.weatherData.temperature | number:0 }}&deg; F</h1>
+      <h2>Feels {{$ctrl.weatherData.apparentTemperature | number:0 }}&deg; F</h2>
+    </div>
+    <div id='add-stats'>
+      <p>Precipitation Probability: {{ $ctrl.weatherData.precipProbability * 100 | number:2 }}%</p>
+      <p>Humidity: {{ $ctrl.weatherData.humidity * 100 | number:0 }}%</p>
+      <p>UV: {{ $ctrl.weatherData.uvIndex }}</p>
+    </div>
   </section>
   <!-- <pre>{{ $ctrl.weatherData | json }}</pre> -->
+<!-- <p>{{ $ctrl.weatherData.time * 1000| date:"short" }}</p> -->
